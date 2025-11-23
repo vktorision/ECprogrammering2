@@ -1,19 +1,16 @@
-import java.util.Scanner;
+void main() {
+    Scanner sc;
+    sc = new Scanner(System.in);
+    String rad;
+    CountRowsAndChars resultat = new CountRowsAndChars();
 
-public class ReadCommand {
-    void main() {
-        Scanner scanner = new Scanner(System.in);
-        String line;
-        StringBuilder text = new StringBuilder();
+    IO.println("Skriv text och avsluta med stop: ");
 
-        IO.println("Skriv text och avsluta med stop: ");
-
-        // fortsätt läs till "stop"
-        while (true) {
-            line = scanner.nextLine();  // Read one line from input
-            text.append(line).append("\n");
-        }
-        //Skriv ut resultat
-        scanner.close();
+    while (resultat.inteStop) {
+        rad = sc.nextLine();
+        resultat.count(rad);
     }
+    IO.println("Rader: " + resultat.radAnt + " Ord: " + resultat.ordAnt + " Tecken: " + resultat.teckAnt);
+
+
 }
