@@ -10,7 +10,7 @@ void main() {
         rad = sc.nextLine();
         resultat.count(rad);
     }
-    IO.println("Rader: " + resultat.radAnt + " Ord: " + resultat.ordAnt + " Tecken: " + resultat.teckAnt);
+    IO.println("Rader: " + resultat.radAnt + " Ord: " + resultat.ordAnt + " Tecken: " + resultat.teckAnt + " Längsta ord: " + resultat.longestWord);
 
 
 }
